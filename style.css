@@ -149,3 +149,43 @@ a:hover {/* Stilizare link la hover */
     color: #ffd84d;
 }
 
+/* MEDIA QUERY pentru tablete și telefoane */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column; /* Coloanele stânga/dreapta una sub alta */
+    }
+
+    .left-side, .right-side {
+        width: 100%; /* să ocupe tot ecranul */
+        padding: 20px; /* mai puțin padding pe mobil */
+    }
+
+    .right-side {
+        padding-top: 10px;
+    }
+}
+
+/* MEDIA QUERY pentru telefoane mici */
+@media (max-width: 480px) {
+    .name {
+        font-size: 1.3rem; /* mai mic */
+    }
+
+    .job-title {
+        font-size: 0.9rem;
+    }
+
+    .right-section h2 {
+        font-size: 1.1rem;
+    }
+
+    .right-section p, ul li {
+        font-size: 0.85rem; /* mai mic text pentru citire ușoară */
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+}
