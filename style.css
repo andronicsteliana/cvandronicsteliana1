@@ -149,26 +149,64 @@ a:hover {/* Stilizare link la hover */
     color: #ffd84d;
 }
 
-/* MEDIA QUERY pentru tablete și telefoane */
+/* ===================== */
+/* MEDIA QUERY - Tablete și telefoane medii */
+/* ===================== */
 @media (max-width: 768px) {
+    body {
+        height: auto; /* elimină fixarea pe 100vh */
+    }
+
     .cv-container {
-        flex-direction: column; /* Coloanele stânga/dreapta una sub alta */
+        flex-direction: column; /* stânga și dreapta sub formă de coloană */
+        height: auto;
+        max-width: 100%; /* să nu depășească ecranul */
     }
 
     .left-side, .right-side {
-        width: 100%; /* să ocupe tot ecranul */
+        width: 100%; /* coloane full width */
         padding: 20px; /* mai puțin padding pe mobil */
     }
 
     .right-side {
         padding-top: 10px;
     }
+
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 15px;
+    }
+
+    .name {
+        font-size: 1.4rem;
+    }
+
+    .job-title {
+        font-size: 1rem;
+    }
+
+    .right-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .right-section p, ul li {
+        font-size: 0.9rem;
+    }
 }
 
-/* MEDIA QUERY pentru telefoane mici */
+/* ===================== */
+/* MEDIA QUERY - Telefoane mici */
+/* ===================== */
 @media (max-width: 480px) {
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 12px;
+    }
+
     .name {
-        font-size: 1.3rem; /* mai mic */
+        font-size: 1.3rem;
     }
 
     .job-title {
@@ -180,12 +218,14 @@ a:hover {/* Stilizare link la hover */
     }
 
     .right-section p, ul li {
-        font-size: 0.85rem; /* mai mic text pentru citire ușoară */
+        font-size: 0.85rem;
     }
 
-    .profile-photo {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 15px;
+    .left-side, .right-side {
+        padding: 15px; /* mai compact pe telefoane mici */
+    }
+
+    .skill-bar {
+        height: 5px; /* bara de skill mai mică */
     }
 }
